@@ -6,8 +6,8 @@ const mongoose = require("mongoose");
 let peopleSchema = new mongoose.Schema({
     name:{type:String,
       require:true},
-    age:Number,
-    favoriteFood:[String]
+     date: { type: Date, default: Date.now() }
+    
 })
 const Person = mongoose.model("Person", peopleSchema);
 
